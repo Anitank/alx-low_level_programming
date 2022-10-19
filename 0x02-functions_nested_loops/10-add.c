@@ -2,13 +2,12 @@
 #include "main.h"
 
 /**
- * add - computes the result of the addition of 2 integers
- * @a: right operand
- * @b: left operand
- * return: returns the result
+ * add - add two numbers
+ * @a: the first number
+ * @b: the secomd number
+ * Return: the addition of both
  */
 int add(int a, int b)
 {
 	return (a + b);
 }
-
