@@ -1,34 +1,117 @@
+
+#include "main.h"
 #include "main.h"
 
+
+
 /**
- * _strchr - locates a character in a string,
+ * _strspn - gets the length of a prefix substring.
  *
- * @s: string.
+ * @s: string to be checked
  *
- * @c: character.
+ * @accept: prefix
  *
- * Return: the pointer to the first occurrence of the character c.
+ * Return: length of substring
  *
  */
 
-char *_strchr(char *s, char c)
+
+
+unsigned int _strspn(char *s, char *accept)
 
 {
 
-	unsigned int i = 0;
+	unsigned int c = 0;
 
-	for (; *(s + i) != '\0'; i++)
+	char *t = accept;
 
-		if (*(s + i) == c)
 
-			return (s + i);
 
-	if (*(s + i) == c)
+	while (*s++)
 
-		return (s + i);
+	{
 
-	return ('\0');
+	while (*accept++)
+
+	{
+
+	if (*(s - 1) == *(accept - 1))
+
+	{
+
+		c++;
+
+			break;
+
+	}
+
+	}
+
+		if (!(*--accept))
+
+			break;
+
+		accept = t;
+
+	}
+
+	return (c);
 
 }
 
 
+
+/**
+ * _strspn - gets the length of a prefix substring.
+ *
+ * @s: string to be checked
+ *
+ * @accept: prefix
+ *
+ * Return: length of substring
+ *
+ */
+
+
+
+unsigned int _strspn(char *s, char *accept)
+
+{
+
+	unsigned int c = 0;
+
+	char *t = accept;
+
+
+
+	while (*s++)
+
+	{
+
+	while (*accept++)
+
+	{
+
+	if (*(s - 1) == *(accept - 1))
+
+	{
+
+		c++;
+
+			break;
+
+	}
+
+	}
+
+		if (!(*--accept))
+
+			break;
+
+		accept = t;
+
+	}
+
+	return (c);
+
+}
