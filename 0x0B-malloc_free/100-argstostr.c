@@ -24,7 +24,7 @@ char *argstostr(int ac, char **av)
 			sumlen++;
 		sumlen++;
 	}
-	sumlen++
+	sumlen++;
 
 	arg_concat = malloc(sumlen * sizeof(char));
 	if (arg_concat == NULL)
